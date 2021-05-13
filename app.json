@@ -1,0 +1,47 @@
+{
+    "name": "Title Countdown",
+    "description": "bruh",
+    "keywords": [
+        "charindith",
+        "title",
+        "Telegram Bot"
+    ],
+    "repository": "https://github.com/charindithjaindu/ChatBackupBot",
+    "success_url": "https://t.me/charindith",
+    "env": {
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Your APP ID from my.telegram.org",
+            "value": ""
+        },
+        "SESSION": {
+            "description": "get telethon session from replit.com/@KeselekPermen/UserButt#main.py",
+            "value": ""
+        }
+	,
+        "GROUP_ID": {
+            "description": "what group you need to change",
+            "value": ""
+        }
+	,
+        "DATE": {
+            "description": "date and time of end",
+            "value": "2021 10 4 7 0 0"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

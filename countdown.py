@@ -1,14 +1,16 @@
 import time
 import datetime
 from pyrogram import Client
+import os
 
 
-cnl=-1001122759576
+cnl=os.getenv("GROUP_ID")
+session=os.getenv("SESSION")
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+date_of_end=os.getenv("DATE")
 
-session='BQDCm62kIyYO9W3IPmOzQGm_1PIw55BhlMYDt6dBmXUFjUk568t1l5GRSYPmCUD6GqIHqM98d9B-uqSVRgIqOjpFY_uIAUN2PsO-LzDIHi4r2IXTyfj49MXsTuqTvE6_a86c222g_Ok8-1PvJe9WOSz096gyoO38Q3KrZTENdSRPHP1leifS_NscHK6uo0vx5q-lJPbX8JkB-geGG_cINdagS3cRKdafop4bn9E7vC9yNegLhegMXI7pDxO_sfnnhnKGkXEHYaxm2_T8VuoP6chnOGewFUTPSOPakdogZbfb-Vnh5fq0yMq3SMNkbvLlVhLjDl0bIfjPUVXePSSdC0kuQsDMBAA'
-api_id = 3214909
-api_hash = '79432f0d96d7ba443b07a0b5a36fdcf9'
-
+paras=date_of_end.split(' ')
 
 def diff_month(d1, d2):
     return (d1.year - d2.year) * 12 + d1.month - d2.month
@@ -33,7 +35,7 @@ def countdown(stop):
 
 
 
-exam_date = datetime.datetime(2021, 10, 4, 7, 0, 0)
+exam_date = datetime.datetime(paras[0], paras[1], paras[2], paras[3], paras[4], paras[5])
 
 print(countdown(exam_date))
 
