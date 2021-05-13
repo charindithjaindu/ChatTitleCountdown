@@ -36,7 +36,7 @@ def countdown(stop):
 for i in range(len(paras)):
 	paras[i]=int(paras[i])
 	
-exam_date = datetime.datetime(paras[0], paras[1], paras[2], paras[3], paras[4], paras[5])
+exam_date = datetime.datetime(int(paras[0]), int(paras[1]), int(paras[2]), int(paras[3]), int(paras[4]), int(paras[5]))
 
 print(countdown(exam_date))
 
